@@ -48,7 +48,7 @@ export const experience: Job[] = [
       "Integrated NetSuite, Dynamics 365, SAP and Brightly EAM to automate procurement, inventory and maintenance, using GraphQL against NetSuite APIs, and designed the relational schema for a new ERP-to-EAM integration.",
       "Designed OAuth2 and JWT authentication with a custom Camel interceptor to secure token generation and access across integration endpoints.",
       "Reduced connector effort by 35–45% with reusable adapter frameworks, backed by JUnit and Mockito tests.",
-      "Built a React dashboard for the Brightly ERP-to-EAM integration and data mapping flow.",
+      "Built a React dashboard for the Brightly ERP-to-EAM integration and data mapping flow, using Claude and GitHub Copilot to accelerate debugging, documentation and unit test generation.",
       "Reviewed 150+ pull requests across 6 engineering teams and wrote 20+ architecture and troubleshooting docs, cutting repeat production issues by 30–40%.",
       "Prototyped RAG documentation search and LLM-driven data extraction with Spring AI and the Claude API.",
     ],
@@ -88,6 +88,7 @@ export const projects: Project[] = [
       "Packaged with Docker and deployable on Kubernetes.",
     ],
     tags: ["Spring Boot", "Spring AI", "PostgreSQL (pgvector)", "Claude API", "Docker", "Kubernetes"],
+    github: "https://github.com/Nishtha-Tiku/rag-support-assistant",
   },
   {
     name: "LLM-Powered Data Mapping & Extraction Pipeline",
@@ -123,6 +124,18 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "TensorFlow", "Keras", "LSTM", "Time Series"],
     github: "https://github.com/Nishtha-Tiku/Stock-Market-Prediction",
+  },
+  {
+    name: "Federated Time-Series Learning under Heterogeneous Clients",
+    period: "Research project",
+    text: "A research-oriented FedAvg implementation studying how federated learning behaves across clients with different time-series data distributions.",
+    bullets: [
+      "Built an LSTM classifier over the UCI HAR raw inertial-signal dataset (128 timesteps × 9 sensor channels).",
+      "Implemented sample-weighted FedAvg aggregation across 4 simulated clients under IID and subject-based partitioning.",
+      "Compared federated runs against a centralized baseline over 5 communication rounds, with partition inspection and unit tests.",
+    ],
+    tags: ["Python", "PyTorch", "LSTM", "Federated Learning", "Time Series"],
+    github: "https://github.com/Nishtha-Tiku/federated-timeseries-fedavg",
   },
 ];
 
@@ -167,13 +180,18 @@ export const skills = [
   { group: "Security", items: ["OAuth2", "JWT", "API Security", "HashiCorp Vault"] },
   {
     group: "Generative AI",
-    items: ["Spring AI", "RAG", "Claude API", "OpenAI API", "LangChain4j", "Prompt Engineering"],
+    items: ["Spring AI", "RAG", "Claude API", "OpenAI API", "Vector Databases (pgvector)", "LangChain4j", "Prompt Engineering"],
+  },
+  {
+    group: "AI-Assisted Development",
+    items: ["Claude", "GitHub Copilot"],
   },
   {
     group: "Deployment & Infrastructure",
     items: ["Docker", "Kubernetes", "Grafana", "CI/CD", "Git", "Gradle", "Maven"],
   },
-  { group: "Testing & Quality", items: ["JUnit", "Mockito", "Postman", "SonarQube", "Code Reviews"] },
+  { group: "Scripting", items: ["Python", "Bash"] },
+  { group: "Testing & Quality", items: ["JUnit", "Mockito", "Postman", "SonarQube", "Code Reviews", "Agile/SDLC"] },
   // Frontend group removed: it only had one skill (React), which still appears in the project and experience tags.
 ];
 
